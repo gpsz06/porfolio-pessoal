@@ -1,0 +1,86 @@
+@media (max-width: 800px) {
+  /* Simplificando as colunas para uma única coluna no layout */
+  .intro-content, .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-one-content {
+    display: block;
+  }
+
+  /* Menu no mobile */
+  .menu {
+    display: none; /* Esconde o menu por padrão */
+    position: fixed; /* Fixar o menu ao fundo da tela */
+    bottom: 0;
+    width: 100%;
+    background: #ffffff;
+  }
+
+  /* Quando o menu estiver visível */
+  .close-menu:checked ~ .menu {
+    display: block;
+  }
+
+  /* Ícone do menu (☰ ou ×) */
+  .close-menu-label::after {
+    content: '☰'; /* Ícone de menu */
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: #f5f5f5;
+    color: #000;
+    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+  /* Quando o menu estiver aberto, muda para o ícone de fechar (×) */
+  .close-menu:checked ~ .close-menu-label::after {
+    content: '×';
+  }
+
+  /* Menu centralizado com as opções de navegação vertical */
+  .menu-content, .menu-content ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Alinha os itens no centro */
+    padding: 2rem;
+  }
+
+  /* Tamanho das fontes no mobile */
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.8rem;
+  }
+
+  h6 {
+    font-size: 1.6rem;
+  }
+
+  /* Esconde o espaçamento extra no menu */
+  .menu-spacing {
+    display: none;
+  }
+}

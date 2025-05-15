@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Título da aba de navegação --> 
+  <title>PORTFÓLIO PESSOAL</title>
+  <!-- Importação de fontes do Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+  <!-- Arquivos de estilo principais e responsivos -->
+  <link rel="stylesheet" href="assets/css/style.css"> 
+  <link rel="stylesheet" href="assets/css/responsive.css"> 
+</head>
+
+<body>
+  <!-- menu com links para navegação -->
+  <input id="close-menu" class="close-menu" type="checkbox" aria-label="close menu" role="button">
+  <label class="close-menu-label" for="close-menu" title="close menu"></label>
+  <aside class="menu fundo-branco">
+    <div class="main-content menu-content">
+      <h1 onclick="getElementById('close-menu').checked = false;">
+        <a href="#home">INICIO</a> 
+      </h1>
+      <nav>
+        <ul onclick="getElementById('close-menu').checked = false;">
+          <li><a href="#intro">Sobre Mim</a></li> 
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+  <!-- Espaçamento entre a Seção Menu é a Proxima Seção -->
+  <div class="menu-spacing"></div> 
+
+  <!-- Seção De Boas-Vindas-->
+  <section id="home" class="intro main-bg section"> 
+    <div class="main-content intro-content">
+      <div class="intro-text-content">
+        <h2>bem-vindos!</h2>
+        <p>- Olá! Bem-vindo(a) ao meu Site Pessoal! <br><br>
+          Aqui você vai conhecer um pouco mais sobre mim. <br><br> Sinta-se à vontade para explorar!
+        </p>
+      </div>
+      <div class="intro-img">
+        <img src="assets/img/maleta.svg" alt="logo de uma maleta preta grande , uma maleta pequena é uma carteira preta">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Apresentação Pessoal-->
+  <section id="intro" class="fundo-branco section">
+    <div class="main-content secao-conteudo">
+      <h2>Sobre Mim</h2>
+      <p>Olá! Meu nome é Guilherme Pereira, sou estudante de <br>Ciência da Computação e sou apaixonado por tecnologia e criatividade.<br>
+        Gosto de explorar novas ferramentas digitais, ouvir músicas, ler, desenhar e tocar violão nas horas vagas.<br> Sempre busco unir estética e funcionalidade nos projetos que desenvolvo,transformando ideias em soluções criativas e eficientes.</p>
+    </div>
+  </section>
+  
+  <!-- Seção sobre informaçôes de Formação-->
+  <section id="formacao" class="main-bg formacao section">
+    <h2 class="main-content">Formação e idiomas</h2>
+    <div class="timeline" class="secao-conteudo">
+      <div class="timeline-item">
+        <h3>FORMAÇÃO ACADEMICA:</h3>
+        <p> Ciência da Computação(Cursando)</p>
+      </div>
+      <div class="timeline-item">
+        <h3>IDIOMAS:</h3>
+        <p>Curso Online (EAD): Inglês Básico – NEW UBEST / UNINTER – 2024 <br>
+          Curso Online (EAD): Inglês Intermediário – NEW UBEST / UNINTER – 2024
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>OUTROS CURSOS:</h3>
+        <p>Curso Online: Informática Básica – CURSA – 2024 <br>
+          Curso Online: HTML e CSS para Iniciantes – Canal do YouTube: Otávio Miranda – 2024
+        </p>
+      </div>
+  </section>
+
+  <!-- Seção sobre Projetos Desenvolvidos-->
+  <section id="portfolio" class="fundo-branco section portfolio">
+    <h2 class="main-content">Meu Portfólio</h2>
+    <div class="container">
+      <div class="projeto"> <!-- Projeto 1-->
+          <h2>Projeto NaruDevs</h2> 
+          <p>Site fictício inspirado no universo do anime Naruto.</p>
+          <a href="https://gpsz06.github.io/projeto-narudevs/" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="projeto"> <!-- Projeto 2-->
+          <h2>Projeto Space Rangers</h2>
+          <p>Site fictício ambientado no universo de "Space Rangers"</p>
+          <a href="https://gpsz06.github.io/Projeto-SpaceRangers/" target="_blank">Ver Projeto</a>
+      </div>
+     </div>
+  </section>
+
+  <!-- Seção de contato com formulário -->
+  <section id="contact" class="intro main-bg section">
+    <div class="main-content intro-content">
+      <div class="intro-text-content">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo preenchendo o formulário abaixo.</p>
+      </div>
+      <div class="intro-img">
+        <img src="assets/img/contact.svg" alt="Ilustração com uma moça, um símbolo de e-mail e um celular.">
+      </div>
+
+      <div class="contact-form">
+        <form>
+          <fieldset class="form-grid">
+            <legend>Fale comigo</legend>
+            <div class="form-group">
+              <label for="first-name">Nome</label>
+              <input type="text" name="first-name" id="first-name" placeholder="Seu nome" required>
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">Sobrenome</label>
+              <input type="text" name="last-name" id="last-name" placeholder="Seu sobrenome" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message">Mensagem</label>
+              <textarea name="message" id="message" cols="30" rows="10" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <button type="submit">Enviar Mensagem</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Rodapé com créditos do autor -->
+  <footer id="footer" class="footer white-bg">
+    <p>feito com &#x2764;&#xFE0F; por Guilherme Pereira</p>
+  </footer>
+  <!-- Botão para voltar ao topo da página -->
+  <a class="back-to-top" href="#">➤</a>
+</body>
+</html>

@@ -1,0 +1,361 @@
+/* Definição de variáveis globais (cores e espaçamentos)*/
+:root {
+    --primary-color: #0A1128;
+    --white-color: #FFFFFF;
+    --light-gray-color: #EEEEEE;
+    --secondary-color: #0012DC;
+    --third-color: #d3d3d3;
+    --gap: 3rem;
+}
+
+/* Reset básico e box-sizing para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Define tamanho Inicial da fonte e rolagem suave*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+/* Estilo base para o corpo da pagina */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+/*Tipografia para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+/*Estilização de tamanhos de títulos*/
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+  
+h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+  
+h3 {
+    font-size: 5rem;
+}
+  
+h4 {
+    font-size: 4.5rem;
+}
+  
+h5 {
+    font-size: 4rem;
+}
+  
+h6 {
+    font-size: 3.5rem;
+}
+/* Links sem sublinhado */
+a {
+    text-decoration: none;
+}
+/* Margem inferior para paragrafos */
+p {
+    margin-bottom: 3rem;
+}
+/* Plano de fundo principal com imagem */
+.main-bg {
+    background-image: url('../img/main-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white-color);
+}
+/* Fundo branco padrão para seções */
+.fundo-branco {
+    background: var(--white-color);
+    color: var(--primary-color);
+
+}
+/* Conteúdo centralizado com padding */
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 9rem var(--gap) 5rem var(--gap);
+}
+/* Cada seção irá ocupar a altura inteira da tela */
+.section {
+    min-height: 100vh;
+}
+/* Estilo da barra de menu fixa no topo */
+.menu {
+    background: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 0.1rem solid var(--light-gray-color);
+}
+/* Layout interno do menu */
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* Link principal do menu */
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+/* Cor herdada para o link do título */
+.menu h1 a {
+    color: inherit;
+}
+/* Lista de navegação horizontal */
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+/* Estilização dos links no menu */
+.menu ul li a {
+    display: block;
+    padding: 1.8rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+/* Efeito de hover nos links do menu */
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+}
+/* Expansão da linha decorativa ao passar o mouse */
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+/* Espaço reservado abaixo do menu fixo */
+.menu-spacing {
+    height: 45px;
+}
+/* Layout da seção de introdução com grid */
+.intro-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+/* Alinhamento vertical de texto e imagem */
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+/* Imagem responsiva */
+.intro-img img, .intro-img svg {
+    max-width: 100%;
+    height: auto;
+}
+/* Seções com conteúdo centralizado e altura total */
+.secao-conteudo {
+    max-width: 64rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+/* Centraliza título da seção formação */
+.formacao h2 {
+  text-align: center;
+}
+/* Estilização da linha do tempo */
+.timeline {
+  max-width: 500px;
+  margin: 0 auto;
+  border-left: 3px solid var(--third-color);
+  padding-left: 20px;
+}
+/* Cada item da linha do tempo */
+.timeline-item {
+  margin-bottom: 10px;
+  position: relative;
+}
+/* Bolinha antes de cada item */
+.timeline-item::before {
+  content: "●";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  color:var(--third-color);
+  font-size: 18px;
+}
+/* Título do item da timeline */
+.timeline-item h3 {
+  margin: 0;
+  color: var(--third-color);
+  font-size: 18px;
+}
+/* texto do Item */
+.timeline-item p {
+  margin: 5px 0 0 0;
+  color: var(--white-color);
+}
+/* Centraliza título da seção portfólio */
+.portfolio h2 {
+    text-align: center;
+}
+
+/* Container de projetos com sombra e padding */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Card de projeto */
+.projeto {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+/* Título do projeto */
+.projeto h2 {
+    color: #2c3e50;
+}
+/* texto do projeto */
+.projeto p {
+    color: #555;
+}
+/* botão com o link do projeto */
+.projeto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+/* muda a cor ao passar o mouse por cima /* botão com o link do projeto */
+.projeto a:hover {
+    background-color: #0b1684;
+}
+/* Formulário ocupa duas colunas no grid */
+.contact-form {
+    grid-column: span 2;
+}
+/* Estilo do título do formulário */
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+/* Layout do formulário em linhas */
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+/* Grupo de campos do formulário */
+.form-group {
+    flex: 1 1 20rem;
+}
+/* Label*/
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+/* input*/
+.form-group input,
+.form-group textarea {
+    border: none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+}
+/* Efeito de foco nos campos */
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 10px 2px var(--third-color);
+}
+/* Força largura total em campos com a classe .full-width */
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+/* Estilo do botão de envio */
+.form-group button {
+    border: 0.1rem solid var(--third-color);
+    background: var(--secondary-color);
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 360ms ease-in-out;
+}
+/* muda a cor ao passar o mouse por cima botão de enviar */
+.form-group button:hover {
+    background: #0b1684;
+}
+
+.form-group::placeholder {
+    color: var(--third-color);
+}
+/* Rodapé */
+.footer {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.footer p {
+    color: #444;
+    margin: 0;
+    padding: 3rem;
+}
+
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
+  }
+
+  .back-to-top:hover {
+    background-color: var(--third-color);
+  }
